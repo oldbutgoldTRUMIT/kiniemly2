@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Background</title>
+    <title>Yeu em, Jenny</title>
     <style>
         body, html {
             margin: 0;
@@ -37,10 +37,12 @@
         <source src="bacphan.mp4" type="video/mp4">
     </video>
 
-    <div class="content">
-        <h1>Chào mừng đến với trang web của tôi!</h1>
-        <p>Đây là một trang web với nền video.</p>
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('backgroundVideo');
+            video.play();
+        });
+    </script>
 
 </body>
 </html>
