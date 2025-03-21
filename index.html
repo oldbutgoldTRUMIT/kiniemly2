@@ -10,6 +10,10 @@
             padding: 0;
             height: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            background-color: pink;
         }
         .video-background {
             position: absolute;
@@ -30,6 +34,19 @@
             text-align: center;
             font-size: 2em;
         }
+         #playButton {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7); /* Nền nút */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2; /* Đảm bảo nút nằm trên video */
+        }
+        #playButton:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Hiệu ứng hover */
+        }
     </style>
 </head>
 <body>
@@ -38,7 +55,7 @@
     <source src="bacphan.mp4" type="video/mp4">
   
 </video>
-<button id="playButton">Phát Video</button>
+<button id="playButton">Ấn vào tui đi</button>
 
 <script>
     document.getElementById('playButton').addEventListener('click', function() {
