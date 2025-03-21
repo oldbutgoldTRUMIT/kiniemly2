@@ -34,16 +34,20 @@
 </head>
 <body>
 
-    <video id="backgroundVideo" autoplay muted loop class="video-background">
-        <source src="bacphan.mp4" type="video/mp4">
-    </video>
+<video id="backgroundVideo" class="video-background" loop>
+    <source src="bacphan.mp4" type="video/mp4">
+  
+</video>
+<button id="playButton">Phát Video</button>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var video = document.getElementById('backgroundVideo');
-            video.play();
-        });
-    </script>
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var video = document.getElementById('backgroundVideo');
+        video.muted = false; // Đảm bảo video không bị tắt tiếng
+        video.play();
+        this.style.display = 'none'; // Ẩn nút sau khi nhấn
+    });
+</script>
 
 </body>
 </html>
